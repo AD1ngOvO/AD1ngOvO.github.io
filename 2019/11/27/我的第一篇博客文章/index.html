@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客文章 | AD1ng的博客</title>
+  <title>在Windows上利用hexo和github搭建个人博客 | AD1ng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章内容  第二章内容  参考文献www.codesheep.cn">
+  <meta name="description" content="node.js的安装以及hexo框架的安装 在node.js官网下载最新版本的node安装包。下载完之后点开进行安装，一直next就行。安装完成之后在cmd命令行下可以输入： node -v 以及 npm -v 来查看版本号。  利用npm来安装cnpm(因为国内npm的镜像源速度很慢，以此需要进行换源)。在cmd命令行下输入: npm install -g cnpm –registry=http">
+<meta name="keywords" content="根据CodeSheep在B站上的视频搭建，自己进行一定的总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客文章">
+<meta property="og:title" content="在Windows上利用hexo和github搭建个人博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0&#x2F;index.html">
 <meta property="og:site_name" content="AD1ng的博客">
-<meta property="og:description" content="第一章内容  第二章内容  参考文献www.codesheep.cn">
+<meta property="og:description" content="node.js的安装以及hexo框架的安装 在node.js官网下载最新版本的node安装包。下载完之后点开进行安装，一直next就行。安装完成之后在cmd命令行下可以输入： node -v 以及 npm -v 来查看版本号。  利用npm来安装cnpm(因为国内npm的镜像源速度很慢，以此需要进行换源)。在cmd命令行下输入: npm install -g cnpm –registry=http">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T16:36:15.717Z">
+<meta property="og:updated_time" content="2019-11-27T11:59:13.884Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="AD1ng的博客" type="application/atom+xml">
@@ -155,7 +156,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客文章
+      在Windows上利用hexo和github搭建个人博客
     </h1>
   
 
@@ -168,11 +169,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h2 id="node-js的安装以及hexo框架的安装"><a href="#node-js的安装以及hexo框架的安装" class="headerlink" title="node.js的安装以及hexo框架的安装"></a>node.js的安装以及hexo框架的安装</h2><ol>
+<li><p>在node.js官网下载最新版本的node安装包。下载完之后点开进行安装，一直next就行。<br>安装完成之后在cmd命令行下可以输入： node -v 以及 npm -v 来查看版本号。</p>
+</li>
+<li><p>利用npm来安装cnpm(因为国内npm的镜像源速度很慢，以此需要进行换源)。<br>在cmd命令行下输入: npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>然后回车。安装完成之后可以输入: cnpm 来查看是否安装成功。</p>
+</li>
+<li><p>安装完cnpm之后在cmd命令行模式下输入: cnpm install -g hexo-cli<br>回车之后就开始进行hexo框架的安装了。安装完成可以用: hexo -v来进行验证</p>
+</li>
+</ol>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
+<h2 id="利用hexo来搭建个人博客"><a href="#利用hexo来搭建个人博客" class="headerlink" title="利用hexo来搭建个人博客"></a>利用hexo来搭建个人博客</h2><ol>
+<li><p>(电脑已经安装了git的可以跳过这一步)首先需要去git官网下载最新的对应的git: <a href="https://github.com/git-for-windows/git/releases/tag/v2.15.0.windows.1" target="_blank" rel="noopener">https://github.com/git-for-windows/git/releases/tag/v2.15.0.windows.1</a><br>下载完成之后一路next默认安装即可。安装完成之后右键文件夹会出现Git Bash Here(我们要的就是这个)。<br>另外我们还要再安装一个最新的git证书: <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0" target="_blank" rel="noopener">https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0</a><br>进去之后点击下载安装GCMW-1.14.0.exe即可。</p>
+</li>
+<li><p>然后在自己想要放置博客文件的位置(可随意)建立一个blog文件夹。<br>我是在G盘的文档文件夹里面建立的。</p>
+</li>
+<li><p>建立blog文件夹之后右键blog文件夹，选择Git Bash Here。</p>
+</li>
+<li><p>然后在出来的bash窗口输入: hexo init 就会开始自动安装hexo博客的基础框架在blog文件夹里面,可以输入: ll 查看blog文件夹里面的内容</p>
+</li>
+<li><p>输入: hexo s 就可以启动hexo博客了，默认是在localhost:4000访问。(输入Ctrl+C可结束)<br>输入: hexo n “我的第一篇博客文章”  可以创建一篇标题为”我的第一篇博客文章”的博客文章<br>输入: hexo g 用来再次生成<br>输入: hexo d 将博客推送到远端</p>
+</li>
+</ol>
 <hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn" target="_blank" rel="noopener">www.codesheep.cn</a></p>
+<h2 id="推送到github"><a href="#推送到github" class="headerlink" title="推送到github"></a>推送到github</h2><ol>
+<li><p>首先需要有个人的github账号。</p>
+</li>
+<li><p>在github上new repository</p>
+</li>
+<li><p>命名必须是 昵称.github.io<br>例如我的github账号为AD1ngOvO,则名称为: AD1ngOvO.github.io</p>
+</li>
+<li><p>安装一个git的插件。输入命令: cnpm install –save hexo-deployer-git</p>
+</li>
+<li><p>用vim打开 _config.yml 这个文件。到文件最底部找到Deployment这个设置。<br>type: git<br>repo: 此处输入刚刚git仓库中生成的地址<br>branch: master<br>然后保存退出。</p>
+</li>
+<li><p>输入: hexo d 推送至github。然后利用 你的github账号.github.io就可以访问这个博客了。<br>例如我的是: <a href="https://AD1ngOvO.github.io" target="_blank" rel="noopener">https://AD1ngOvO.github.io</a></p>
+</li>
+</ol>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://bilibili.com/video/av44544186?t=1453" target="_blank" rel="noopener">CodeSheep的B站视频</a><br><a href="http://www.codesheep.cn" target="_blank" rel="noopener">www.codesheep.cn</a></p>
 
       
 
@@ -202,6 +236,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">根据CodeSheep在B站上的视频搭建，自己进行一定的总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -392,6 +437,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">根据CodeSheep在B站上的视频搭建，自己进行一定的总结</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
