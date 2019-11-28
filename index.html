@@ -171,10 +171,10 @@
 <p>F：标志字段(Flag)，规定为0x7E(01111110),PPP帧定界符。<br>地址字段A(0xFF:11111111),控制字段C(0x03:00000011)，无意义。<br>协议字段: 0x0021   IP数据报<br>      0xC021   LCP数据报<br>      0x8021   NCP数据报</p>
 <hr>
 <h2 id="CSMA-CD协议"><a href="#CSMA-CD协议" class="headerlink" title="CSMA/CD协议"></a>CSMA/CD协议</h2><p><strong>CSMA/CD协议</strong>(载波监听多点接入/碰撞检测)，使用广播信道。</p>
-<p>主要要点:<br>1.准备发送：从网络层获得一个分组，加上以太网首部和尾部组成以太网帧，放入适配器缓存。在发送前，先检测信道。<br>2.检测信道：检测到信道忙，则不停检测，一直等待信道空闲，并在96比特时间内信道保持空闲，则发送这个帧。<br>3.边发送边监听：有两种情况。<strong>一是发送成功</strong>。在争用期内未检测到碰撞，这个帧发送成功，回到步骤1。<br>        <strong>一是发送失败</strong>。在争用期内检测到碰撞，立即停止发送数据，发送人为干扰信号。适配器执行指数退避算法，等待r倍512比特时间后，回到步骤2。若重传达到16次仍不成功，停止重传而向上报错。</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《计算机网络》(第7版)   谢希仁 编著</p>
-
+<p>主要要点:<br>1.准备发送：从网络层获得一个分组，加上以太网首部和尾部组成以太网帧，放入适配器缓存。在发送前，先检测信道。<br>2.检测信道：检测到信道忙，则不停检测，一直等待信道空闲，并在96比特时间内信道保持空闲，则发送这个帧。</p>
+        
+          <a class="article-more-a" href="/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/#more">more >></a>
+        
       
 
       
@@ -255,37 +255,9 @@
 <li><p>安装完cnpm之后在cmd命令行模式下输入: cnpm install -g hexo-cli<br>回车之后就开始进行hexo框架的安装了。安装完成可以用: hexo -v来进行验证</p>
 </li>
 </ol>
-<hr>
-<h2 id="利用hexo来搭建个人博客"><a href="#利用hexo来搭建个人博客" class="headerlink" title="利用hexo来搭建个人博客"></a>利用hexo来搭建个人博客</h2><ol>
-<li><p>(电脑已经安装了git的可以跳过这一步)首先需要去git官网下载最新的对应的git: <a href="https://github.com/git-for-windows/git/releases/tag/v2.15.0.windows.1" target="_blank" rel="noopener">https://github.com/git-for-windows/git/releases/tag/v2.15.0.windows.1</a><br>下载完成之后一路next默认安装即可。安装完成之后右键文件夹会出现Git Bash Here(我们要的就是这个)。<br>另外我们还要再安装一个最新的git证书: <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0" target="_blank" rel="noopener">https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0</a><br>进去之后点击下载安装GCMW-1.14.0.exe即可。</p>
-</li>
-<li><p>然后在自己想要放置博客文件的位置(可随意)建立一个blog文件夹。<br>我是在G盘的文档文件夹里面建立的。</p>
-</li>
-<li><p>建立blog文件夹之后右键blog文件夹，选择Git Bash Here。</p>
-</li>
-<li><p>然后在出来的bash窗口输入: hexo init 就会开始自动安装hexo博客的基础框架在blog文件夹里面,可以输入: ll 查看blog文件夹里面的内容</p>
-</li>
-<li><p>输入: hexo s 就可以启动hexo博客了，默认是在localhost:4000访问。(输入Ctrl+C可结束)<br>输入: hexo n “我的第一篇博客文章”  可以创建一篇标题为”我的第一篇博客文章”的博客文章<br>输入: hexo g 用来再次生成<br>输入: hexo d 将博客推送到远端</p>
-</li>
-</ol>
-<hr>
-<h2 id="推送到github"><a href="#推送到github" class="headerlink" title="推送到github"></a>推送到github</h2><ol>
-<li><p>首先需要有个人的github账号。</p>
-</li>
-<li><p>在github上new repository</p>
-</li>
-<li><p>命名必须是 昵称.github.io<br>例如我的github账号为AD1ngOvO,则名称为: AD1ngOvO.github.io</p>
-</li>
-<li><p>安装一个git的插件。输入命令: cnpm install –save hexo-deployer-git</p>
-</li>
-<li><p>用vim打开 _config.yml 这个文件。到文件最底部找到Deployment这个设置。<br>type: git<br>repo: 此处输入刚刚git仓库中生成的地址<br>branch: master<br>然后保存退出。</p>
-</li>
-<li><p>输入: hexo d 推送至github。然后利用 你的github账号.github.io就可以访问这个博客了。<br>例如我的是: <a href="https://AD1ngOvO.github.io" target="_blank" rel="noopener">https://AD1ngOvO.github.io</a></p>
-</li>
-</ol>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://bilibili.com/video/av44544186?t=1453" target="_blank" rel="noopener">CodeSheep的B站视频</a><br><a href="http://www.codesheep.cn" target="_blank" rel="noopener">www.codesheep.cn</a></p>
-
+        
+          <a class="article-more-a" href="/2019/11/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
+        
       
 
       
@@ -309,81 +281,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-26T16:29:54.858Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/hello-world/">展开全文 >></a>
         </p>
       
 
