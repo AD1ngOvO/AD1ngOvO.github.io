@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | AD1ng的博客</title>
+  <title>【学习笔记】数据链路层：PPP协议和CSMA/CD协协议 | AD1ng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AD1ng的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="PPP协议PPP协议是计算机和ISP进行通信时的数据链路层协议。 组成部分：1.一个将IP数据报封装到串行链路的方法。      2.用来建立、配置和测试数据链路连接的链路控制协议LCP。      3.一套网络控制协议NCP  F：标志字段(Flag)，规定为0x7E(01111110),PPP帧定界符。地址字段A(0xFF:11111111),控制字段C(0x03:00000011)，无意义。">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【学习笔记】数据链路层：PPP协议和CSMA&#x2F;CD协协议">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE&#x2F;index.html">
 <meta property="og:site_name" content="AD1ng的博客">
+<meta property="og:description" content="PPP协议PPP协议是计算机和ISP进行通信时的数据链路层协议。 组成部分：1.一个将IP数据报封装到串行链路的方法。      2.用来建立、配置和测试数据链路连接的链路控制协议LCP。      3.一套网络控制协议NCP  F：标志字段(Flag)，规定为0x7E(01111110),PPP帧定界符。地址字段A(0xFF:11111111),控制字段C(0x03:00000011)，无意义。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20160204105742700">
+<meta property="og:updated_time" content="2019-11-28T16:42:33.191Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20160204105742700">
   
     <link rel="alternative" href="/atom.xml" title="AD1ng的博客" type="application/atom+xml">
   
@@ -143,36 +149,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-【学习笔记】数据链路层：PPP协议和CSMA-CD协协议" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      【学习笔记】数据链路层：PPP协议和CSMA/CD协协议
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
+
+        
+        <a href="/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
   	<time datetime="2019-11-28T16:09:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/">【学习笔记】数据链路层：PPP协议和CSMA/CD协协议</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="PPP协议"><a href="#PPP协议" class="headerlink" title="PPP协议"></a>PPP协议</h2><p><strong>PPP协议</strong>是计算机和ISP进行通信时的数据链路层协议。</p>
+<p>组成部分：1.一个将IP数据报封装到串行链路的方法。<br>      2.用来建立、配置和测试数据链路连接的链路控制协议LCP。<br>      3.一套网络控制协议NCP</p>
+<p><img src="https://img-blog.csdn.net/20160204105742700" alt="PPP帧格式"></p>
+<p>F：标志字段(Flag)，规定为0x7E(01111110),PPP帧定界符。<br>地址字段A(0xFF:11111111),控制字段C(0x03:00000011)，无意义。<br>协议字段: 0x0021   IP数据报<br>      0xC021   LCP数据报<br>      0x8021   NCP数据报</p>
+<hr>
+<h2 id="CSMA-CD协议"><a href="#CSMA-CD协议" class="headerlink" title="CSMA/CD协议"></a>CSMA/CD协议</h2><p><strong>CSMA/CD协议</strong>(载波监听多点接入/碰撞检测)，使用广播信道。</p>
+<p>主要要点:<br>1.准备发送：从网络层获得一个分组，加上以太网首部和尾部组成以太网帧，放入适配器缓存。在发送前，先检测信道。<br>2.检测信道：检测到信道忙，则不停检测，一直等待信道空闲，并在96比特时间内信道保持空闲，则发送这个帧。<br>3.边发送边监听：有两种情况。<strong>一是发送成功</strong>。在争用期内未检测到碰撞，这个帧发送成功，回到步骤1。<br>        <strong>一是发送失败</strong>。在争用期内检测到碰撞，立即停止发送数据，发送人为干扰信号。适配器执行指数退避算法，等待r倍512比特时间后，回到步骤2。若重传达到16次仍不成功，停止重传而向上报错。</p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《计算机网络》(第7版)   谢希仁 编著</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,84 +197,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2019-11-26T16:34:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在Windows上利用hexo和github搭建个人博客(根据CodeSheep在B站的视频，自己进行的一些总结)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">在Windows上利用hexo和github搭建个人博客(根据CodeSheep在B站的视频，自己进行的一些总结)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-26T16:29:54.858Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/27/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -284,8 +319,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
