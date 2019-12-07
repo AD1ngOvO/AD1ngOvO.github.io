@@ -145,6 +145,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-【学习笔记】网络层：ARP协议和IP协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9AARP%E5%8D%8F%E8%AE%AE%E5%92%8CIP%E5%8D%8F%E8%AE%AE/">【学习笔记】网络层-地址解析协议ARP和网际协议IP</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9AARP%E5%8D%8F%E8%AE%AE%E5%92%8CIP%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
+  	<time datetime="2019-12-07T04:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><p><strong>地址解析协议ARP</strong>:将IP地址解析为硬件地址。通过在主机<strong>ARP高速缓存</strong>中存放一个从IP地址到硬件地址的<strong>映射表</strong>。</p>
+<hr>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><p><img src="https://akaedu.github.io/book/images/tcpip.ipformat.png" alt="IP数据报格式"></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9AARP%E5%8D%8F%E8%AE%AE%E5%92%8CIP%E5%8D%8F%E8%AE%AE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9AARP%E5%8D%8F%E8%AE%AE%E5%92%8CIP%E5%8D%8F%E8%AE%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【学习笔记】数据链路层：PPP协议和CSMA-CD协协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -169,9 +247,6 @@
 <p>组成部分：1.一个将IP数据报封装到串行链路的方法。<br>      2.用来建立、配置和测试数据链路连接的链路控制协议LCP。<br>      3.一套网络控制协议NCP</p>
 <p><img src="https://img-blog.csdn.net/20160204105742700" alt="PPP帧格式"></p>
 <p>F：标志字段(Flag)，规定为0x7E(01111110),PPP帧定界符。<br>地址字段A(0xFF:11111111),控制字段C(0x03:00000011)，无意义。<br>协议字段: 0x0021   IP数据报<br>      0xC021   LCP数据报<br>      0x8021   NCP数据报</p>
-<hr>
-<h2 id="CSMA-CD协议"><a href="#CSMA-CD协议" class="headerlink" title="CSMA/CD协议"></a>CSMA/CD协议</h2><p><strong>CSMA/CD协议</strong>(载波监听多点接入/碰撞检测)，使用广播信道。</p>
-<p>主要要点:<br>1.准备发送：从网络层获得一个分组，加上以太网首部和尾部组成以太网帧，放入适配器缓存。在发送前，先检测信道。<br>2.检测信道：检测到信道忙，则不停检测，一直等待信道空闲，并在96比特时间内信道保持空闲，则发送这个帧。</p>
         
           <a class="article-more-a" href="/2019/11/29/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%9APPP%E5%8D%8F%E8%AE%AE%E5%92%8CCSMA-CD%E5%8D%8F%E5%8D%8F%E8%AE%AE/#more">more >></a>
         
